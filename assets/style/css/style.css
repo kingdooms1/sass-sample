@@ -18,7 +18,7 @@ a {
 }
 
 header {
-  height: 5vh;
+  height: 80px;
 }
 
 .navbar {
@@ -53,16 +53,19 @@ header {
   border-radius: 50%;
 }
 
+.navbar .lines {
+  display: none;
+}
+
 .content {
-  margin: 4% 5%;
+  margin: 30px 40px;
   display: flex;
   align-items: center;
-  height: 75vh;
 }
 
 .content .right {
   width: 70%;
-  height: 100%;
+  height: 600px;
   border-radius: 10px;
   background-color: white;
   display: flex;
@@ -79,7 +82,7 @@ header {
 
 .content .left {
   width: 30%;
-  height: 100%;
+  height: 600px;
   border-radius: 10px;
   background-color: white;
   margin-right: 50px;
@@ -171,6 +174,69 @@ header {
 
 .footer .right a {
   color: white;
+}
+
+@media screen and (max-width: 992px) {
+  .items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .content .right {
+    height: 500px;
+  }
+  .content .left {
+    height: 500px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .content {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .content .right {
+    height: 500px;
+    width: 100%;
+  }
+  .content .left {
+    height: auto;
+    width: 100%;
+    margin: 10px auto;
+  }
+}
+@media screen and (max-width: 576px) {
+  .items {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+  }
+  .navbar .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .navbar .right .links {
+    display: none;
+  }
+  .navbar .right .lines {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+  }
+  .navbar .right .lines .line {
+    width: 35px;
+    height: 4px;
+    margin: 2.5px 0px;
+    background-color: white;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

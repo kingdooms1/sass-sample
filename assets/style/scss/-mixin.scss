@@ -8,10 +8,6 @@
     box-sizing: border-box;
     font-family: dirooz;
 }
-@mixin style{
-    display: flex;
-    align-items: center;
-}
 @mixin col-cards{
     display: grid;
     grid-template-columns: repeat(1,1fr);
@@ -30,5 +26,23 @@
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat(1,1fr);
+    gap: 10px;
+}
+@mixin row-cards-lg{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 10px;
+}
+@mixin row-cards-md{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 10px;
+}
+@mixin row-cards-sm{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(4,1fr);
     gap: 10px;
 }
