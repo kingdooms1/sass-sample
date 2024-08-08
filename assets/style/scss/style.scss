@@ -1,0 +1,152 @@
+@import "-mixin.scss";
+@import "-variables.scss";
+
+*{
+    @include static();
+}
+body{
+    background-color: rgb(223, 223, 255);
+}
+a{
+    text-decoration:none;
+}
+
+
+// header
+header{
+    height: 5vh;
+}
+.navbar{
+    @include style();
+    justify-content: space-between;
+    padding: 10px 3%;
+    background-color: $firstcolor;
+}
+.navbar .name{
+    color: white;
+}
+.navbar .right{
+    @include style();
+}
+.navbar .right .links{
+    font-size: 20px;
+    margin-right: 20px;
+}
+.navbar .right .links a{
+    color: white;
+    margin-right: 20px;
+}
+.navbar .logo img{
+    width: 40px;
+    border-radius: 50%;
+}
+// end header
+
+
+// content
+.content{
+    margin: 4% 5%;
+    @include style();
+    height: 75vh;
+}
+.content .right{
+    width: 70%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: $secondcolor;
+    @include style();
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.content .right .c-logo img{
+    width: 40%;
+    border-radius: 10px;
+}
+.content .left{
+    width: 30%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: $secondcolor;
+    margin-right: 50px;
+}
+.content .right .title h1{
+    color: $firstcolor;
+    font-size: 50px;
+}
+.content .right .title h4{
+    font-size: 35px;
+}
+.content .left .cards{
+    @include col-cards();
+}
+.content .left .card{
+    @include card();
+}
+// end content
+
+
+// items
+.items{
+    @include row-cards();
+    margin: 4% 5%;
+}
+.items .item{
+    background-color: $secondcolor;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.items .item img{
+    width: 100%;
+}
+.items .item .item-title{
+    margin: 2% 5%;
+    text-align: justify;
+    font-weight: bold;
+}
+.items .item .item-title p{
+    padding-bottom: 10px;
+}
+.items .item .item-title a{
+    background-color: $firstcolor;
+    color: white;
+    padding: 1% 1.5%;
+    border-radius: 10px;
+}
+// end items
+
+
+// footet
+.footer{
+    background-color: $firstcolor;
+    padding: 1% 5%;
+    @include style();
+}
+.footer .left{
+    width: 50%;
+    color: white;
+    font-weight:800;
+}
+.footer .right{
+    width: 50%;
+    padding: 0px 3%;
+}
+.footer .right li{
+    list-style-type: none;
+    font-weight: bold;
+    font-size: 25px;    
+}
+.footer .right a{
+    color: white;
+}
+// end footer
+
+
+
+
+
+
+
+
+
+

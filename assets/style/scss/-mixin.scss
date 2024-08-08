@@ -1,0 +1,34 @@
+@mixin static{
+    @font-face {
+        font-family: dirooz;
+        src: url(/assets/Font/Dirooz.ttf);
+    }
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: dirooz;
+}
+@mixin style{
+    display: flex;
+    align-items: center;
+}
+@mixin col-cards{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(4,1fr);
+    text-align: center;
+}
+@mixin card{
+    margin: 5% auto;
+    width: 75%;
+    color: white;
+    background-color: $firstcolor;
+    padding: 8% 15%;
+    border-radius: 10px;
+}
+@mixin row-cards{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(1,1fr);
+    gap: 10px;
+}
